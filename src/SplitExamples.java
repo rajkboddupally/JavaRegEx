@@ -15,11 +15,13 @@ public class SplitExamples {
        // String[] strArr = new String[10];
         String myString = "   Horse         Cow\n\n.   \r Camel \t\t Sheep - & + $ ?       . @  \n Goat        ";
 
-        myString = myString.replaceAll("[\\n\\r\\t\\s-&+$?.@]"," ");
+        //myString = myString.replaceAll("[\\n\\r\\t\\s-&+$?.@]"," ");
+
+        myString = myString.replaceAll("[^A-Za-z]", " ");
 
         String[] strArr = myString.split(" ");
 
-        System.out.println(myString);
+        //System.out.println(myString);
 
         List<String> myList = new ArrayList<>();
         for (String str : strArr) {
